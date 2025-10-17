@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark px-3">
+  <a class="navbar-brand" routerLink="/employees">EMS</a>
+
+  <ul class="navbar-nav flex-row">
+    <li class="nav-item me-3">
+      <a class="nav-link" routerLink="/employees">Employees</a>
+    </li>
+
+
+    @if(isHR){
+      <li class="nav-item">
+      <a class="nav-link" routerLink="/create-employee">Add Employee</a>
+    </li>
+    }
+  </ul>
+
+  <div class="ms-auto d-flex align-items-center text-light">
+
+    @if(email){
+    <button (click)="logout()"
+            class="btn btn-outline-light btn-sm">
+      Logout
+    </button>
+    }
+
+
+
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

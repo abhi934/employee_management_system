@@ -1,0 +1,40 @@
+<p>Employee Details:</p>
+
+<div>
+    <div>
+        <label>
+            <b>
+                First Name:
+            </b> 
+        </label>
+            {{employee.firstName}}
+    </div>
+
+    <div>
+        <label>
+            <b>
+                Last Name:
+            </b> 
+        </label>
+            {{employee.lastName}}
+    </div>
+
+    <div>
+        <label>
+            <b>
+                Email ID:
+            </b> 
+        </label>
+            {{employee.emailId}}
+
+    </div>
+    
+    @if(employee.statusChangeAt){
+    <div class="small text-muted">
+            since {{ employee.statusChangeAt | date:'medium' }}
+          </div>    
+    }
+
+
+</div>
+
